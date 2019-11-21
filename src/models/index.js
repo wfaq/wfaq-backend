@@ -13,6 +13,9 @@ mongoose.connect(
   }
 );
 
+<<<<<<< HEAD
 // require('../models/questions');
 
+=======
+>>>>>>> master
 module.exports = mongoose;
