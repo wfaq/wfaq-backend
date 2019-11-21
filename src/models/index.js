@@ -5,7 +5,7 @@ require("dotenv").config({
 });
 
 mongoose.connect(
-  `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0-erizp.mongodb.net/${process.env.DB_DATABASE}retryWrites=true&w=majority`,
+  `mongodb+srv://wfaq:amarelo23*@cluster0-zmq0q.mongodb.net/test?retryWrites=true&w=majority`,
   {
     useNewUrlParser: true,
     useCreateIndex: true,
@@ -13,9 +13,4 @@ mongoose.connect(
   }
 );
 
-<<<<<<< HEAD
-// require('../models/questions');
-
-=======
->>>>>>> master
 module.exports = mongoose;

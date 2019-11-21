@@ -1,6 +1,6 @@
-const mongoose = require("mongoose");
+const {Schema, model} = require("mongoose");
 
-const QuestionSchema = new mongoose.Schema({
+const QuestionSchema = new Schema({
     title:{
         type: String,
         required: true,
@@ -9,13 +9,11 @@ const QuestionSchema = new mongoose.Schema({
         type: String,
         required: true, 
     },
-    postedAt: {
-       type: Date,
-       default: Date.now, 
-    },
     user:{
         type: String,
     }
+}, {
+    timestamps: true,
 });
 
-mongoose.model('Question',QuestionSchema);
+module.exports = model('Question', QuestionSchema);
