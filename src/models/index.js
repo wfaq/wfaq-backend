@@ -13,4 +13,6 @@ mongoose.connect(
   }
 );
 
+// require('../models/questions');
+
 module.exports = mongoose;
