@@ -20,6 +20,10 @@ const UserSchema = new Schema(
       required: true,
       select: false
     },
+    active: {
+      type: Boolean,
+      required: true,
+    },
     role: {
       type: Number,
       required: true
