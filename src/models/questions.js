@@ -1,19 +1,22 @@
-const {Schema, model} = require("mongoose");
+const { Schema, model } = require("mongoose");
 
-const QuestionSchema = new Schema({
-    title:{
-        type: String,
-        required: true,
+const QuestionSchema = new Schema(
+  {
+    title: {
+      type: String,
+      required: true
     },
-    Question: {
-        type: String,
-        required: true, 
+    question: {
+      type: String,
+      required: true
     },
-    user:{
-        type: String,
+    user: {
+      type: String
     }
-}, {
-    timestamps: true,
-});
+  },
+  {
+    timestamps: true
+  }
+);
 
-module.exports = model('Question', QuestionSchema);
+module.exports = model("Question", QuestionSchema);
