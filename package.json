@@ -14,6 +14,7 @@
     "jest": "^24.9.0",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.7.12",
+    "node-gyp": "^6.0.1",
     "nodemon": "^2.0.1",
     "validator": "^12.1.0"
   },

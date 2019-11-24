@@ -23,6 +23,10 @@ const UserSchema = new Schema(
     role: {
       type: Number,
       required: true
+    },
+    active: {
+      type: Boolean,
+      required: true,
     }
   },
   {
