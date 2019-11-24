@@ -1,4 +1,5 @@
 const { Schema, model } = require("mongoose");
+const validator = require("validator");
 const bcrypt = require("bcrypt");
 
 const UserSchema = new Schema(
@@ -7,9 +8,17 @@ const UserSchema = new Schema(
       type: String,
       required: true
     },
+    email: {
+      type: String,
+      required: [true, "Please insert email!"],
+      unique: true,
+      lowercase: true,
+      validate: [validator.isEmail, "Email must be valid!"]
+    },
     password: {
       type: String,
-      required: true
+      required: true,
+      select: false
     },
     role: {
       type: Number,

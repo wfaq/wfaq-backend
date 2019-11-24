@@ -1,8 +1,12 @@
 const router = require("express").Router();
 const questionRoutes = require("./questionRoutes");
 const UsersRouters = require("./usersRouters");
+const authRoutes = require("./authRoutes");
 
-router.use("/questions", questionRoutes);
+const auth = require("../middlewares/auth");
+
+router.use(authRoutes);
+router.use("/questions", auth, questionRoutes);
 router.use("/users", UsersRouters);
 
 router.get("/", (req, res) => {
