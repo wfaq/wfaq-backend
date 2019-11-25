@@ -15,8 +15,8 @@ const QuestionSchema = new Schema(
     },
     answers: [
       {
-        user_id: String,
-        answer: String,
+        user_id: { type: String, required: true },
+        answer: { type: String, required: true },
         upVotes: [],
         downVotes: []
       }
