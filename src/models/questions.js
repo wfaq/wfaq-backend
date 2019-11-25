@@ -12,7 +12,15 @@ const QuestionSchema = new Schema(
     },
     user: {
       type: String
-    }
+    },
+    answers: [
+      {
+        user_id: String,
+        answer: String,
+        upVotes: [],
+        downVotes: []
+      }
+    ]
   },
   {
     timestamps: true
