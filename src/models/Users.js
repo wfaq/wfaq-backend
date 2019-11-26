@@ -2,6 +2,8 @@ const { Schema, model } = require("mongoose");
 const validator = require("validator");
 const bcrypt = require("bcrypt");
 
+validator.matches  //\B(\#[a-zA-Z]+\b)(?!;)
+
 const UserSchema = new Schema(
   {
     name: {
