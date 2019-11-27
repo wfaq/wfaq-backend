@@ -7,16 +7,15 @@ require("dotenv").config({
 });
 
 mongoose.connect(
-    `mongodb+srv://teste1:teste1@cluster0-zmq0q.mongodb.net/test?retryWrites=true&w=majority`,
-    {
-      useNewUrlParser: true,
-      useCreateIndex: true,
-      useUnifiedTopology: true
-    }
-  );
+  `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0-zmq0q.mongodb.net/${process.env.DB_DATABASE}?retryWrites=true&w=majority`,
+  {
+    useNewUrlParser: true,
+    useCreateIndex: true,
+    useUnifiedTopology: true
+  }
+);
 
 const routes = require("./routes");
-
 
 const app = express();
 

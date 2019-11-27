@@ -12,7 +12,16 @@ const QuestionSchema = new Schema(
     },
     user: {
       type: String
-    }
+    },
+    answers: [
+      {
+        user_id: { type: String, required: true },
+        answer: { type: String, required: true },
+        upVotes: [],
+        downVotes: []
+      }
+    ],    
+    tags: [],
   },
   {
     timestamps: true
