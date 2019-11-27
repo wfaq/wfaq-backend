@@ -20,7 +20,9 @@ const QuestionSchema = new Schema(
         upVotes: [],
         downVotes: []
       }
-    ]
+    ],
+    
+    tags: [],
   },
   {
     timestamps: true
