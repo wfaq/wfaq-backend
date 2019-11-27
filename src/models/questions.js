@@ -22,7 +22,7 @@ const QuestionSchema = new Schema(
         downVotes: []
       }
     ],
-  tags: [], //\B(\#[a-zA-Z]+\b)(?!;)
+  tags: [], //\B(\#[a-zA-Z]+\b)(?!;) pull
   },
   {
     timestamps: true

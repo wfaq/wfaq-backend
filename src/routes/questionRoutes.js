@@ -18,6 +18,6 @@ router.post("/:id/answers/:answerId/up", AnswerVotesController.up);
 router.post("/:id/answers/:answerId/down", AnswerVotesController.down);
 
 router.post("/:id/tags",TagController.store);
-router.delete("/:id/:tag/tags",TagController.destroy);
+router.delete("/:id/:tag/tags",TagController.destroy); //pull
 
 module.exports = router;
