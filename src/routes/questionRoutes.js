@@ -17,6 +17,7 @@ router.delete("/:id/answers/:answerId", AnswerController.destroy);
 router.post("/:id/answers/:answerId/up", AnswerVotesController.up);
 router.post("/:id/answers/:answerId/down", AnswerVotesController.down);
 
+//subir
 router.post("/:id/tags",TagController.store);
 router.delete("/:id/:tag/tags",TagController.destroy); //pull
 
