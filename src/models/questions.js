@@ -21,7 +21,7 @@ const QuestionSchema = new Schema(
         downVotes: []
       }
     ],    
-    tags: [],
+    tags: [], //todo
   },
   {
     timestamps: true
