@@ -29,7 +29,10 @@ module.exports = {
         qst.answers.splice(tagIndex, 1);
 
         qst.save();
+<<<<<<< HEAD
+=======
         
+>>>>>>> master
 
         return res.status(204).send();
       }

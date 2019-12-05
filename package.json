@@ -14,7 +14,10 @@
     "jest": "^24.9.0",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.7.12",
+    "node-gyp": "^6.0.1",
     "nodemon": "^2.0.1",
+    "test": "^0.6.0",
+    "tests": "^0.4.2",
     "validator": "^12.1.0"
   },
   "scripts": {
