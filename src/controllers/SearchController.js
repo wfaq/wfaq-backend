@@ -2,7 +2,6 @@ const question = require("../models/questions");
 
 module.exports = {
   async index(req, res) {
-    console.log(req.query.search);
     const questions = await question.find({
       $or: [
         { title: { $regex: `.*${req.query.search}.*`, $options: "i" } },
