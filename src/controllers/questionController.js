@@ -7,6 +7,13 @@ module.exports = {
     return res.status(200).json(questions);
   },
 
+  async show(req, res) {
+    const { _id } = req.params;
+    const questions = await question.find({ _id });
+
+    return res.status(200).json(questions);
+  },
+
   async create(req, res) {
     const qst = await question.create(req.body);
 
