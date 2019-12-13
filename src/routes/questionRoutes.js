@@ -6,6 +6,7 @@ const AnswerVotesController = require("../controllers/AnswerVotesController");
 const TagController = require("../controllers/TagController");
 
 router.get("/", QuestionController.index);
+router.get("/:_id", QuestionController.show);
 router.post("/", QuestionController.create);
 router.put("/:id", QuestionController.update);
 router.delete("/:id", QuestionController.destroy);
@@ -17,8 +18,9 @@ router.delete("/:id/answers/:answerId", AnswerController.destroy);
 router.post("/:id/answers/:answerId/up", AnswerVotesController.up);
 router.post("/:id/answers/:answerId/down", AnswerVotesController.down);
 
-//subir
+
 router.post("/:id/tags",TagController.store);
 router.delete("/:id/:tag/tags",TagController.destroy); //pull
+
 
 module.exports = router;
