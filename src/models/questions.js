@@ -1,4 +1,5 @@
 const { Schema, model } = require("mongoose");
+const validator = require("validator");
 
 const QuestionSchema = new Schema(
   {
@@ -20,8 +21,8 @@ const QuestionSchema = new Schema(
         upVotes: [],
         downVotes: []
       }
-    ],    
-    tags: [], //todo
+    ],
+  tags: [], //sistema de tags
   },
   {
     timestamps: true

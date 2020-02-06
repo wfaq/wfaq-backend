@@ -2,6 +2,8 @@ const { Schema, model } = require("mongoose");
 const validator = require("validator");
 const bcrypt = require("bcrypt");
 
+validator.matches  //\B(\#[a-zA-Z]+\b)(?!;)
+
 const UserSchema = new Schema(
   {
     name: {
@@ -27,6 +29,10 @@ const UserSchema = new Schema(
     role: {
       type: Number,
       required: true
+    },
+    active: {
+      type: Boolean,
+      required: true,
     }
   },
   {
