@@ -16,13 +16,24 @@ const QuestionSchema = new Schema(
     },
     answers: [
       {
-        user_id: { type: String, required: true },
-        answer: { type: String, required: true },
+        user_id: {
+          type: String,
+          required: true
+        },
+        answer: {
+          type: String,
+          required: true
+        },
+        willVote: {
+          type: Boolean,
+          required: false,
+          default: false
+        },
         upVotes: [],
-        downVotes: []
+        downVotes: [],
       }
     ],
-  tags: [], //sistema de tags
+    tags: [], //sistema de tags
   },
   {
     timestamps: true

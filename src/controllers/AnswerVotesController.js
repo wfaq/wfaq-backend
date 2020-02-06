@@ -61,5 +61,34 @@ module.exports = {
 
     qst.save();
     return res.status(204).send();
+  },
+
+  async will(req, res) {
+    const { id, answerId } = req.params;
+
+    const qst = await question.findOne({ _id: id });
+
+    const willVoteExists = qst.answers.find(
+      answer => answer.willVote === true
+    );
+
+    if (willVoteExists) {
+      return res.status(401)
+                .send({
+                  error: "willVote already exists!",
+                  answerId: willVoteExists._id
+                });
+    }
+
+    const answer = qst.answers.find(
+      answer => answer.id === answerId
+    );
+
+
+
+    answer.willVote = true;
+    qst.save();
+
+    return res.status(204).send();
   }
 };
