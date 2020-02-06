@@ -13,23 +13,23 @@ module.exports = {
            if (!tagAlreadyIn) {
             tags.push(item);
             qst.save();
-           };             
-        });        
+           };
+        });
 
         return res.status(201).json(qst);
       },
 
       async destroy(req, res) {
         const { id, tag } = req.params;
-    
-        const qst = await question.findOne({ _id: id }); 
+
+        const qst = await question.findOne({ _id: id });
 
         const tagIndex = qst.tags.findIndex(tag => qst.tags === tag);
 
         qst.answers.splice(tagIndex, 1);
 
         qst.save();
-        
+
 
         return res.status(204).send();
       }

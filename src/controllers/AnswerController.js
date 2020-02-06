@@ -5,6 +5,7 @@ module.exports = {
     const { id } = req.params;
     const qst = await question.findOne({ _id: id });
     const { answers } = qst;
+
     answers.push(req.body);
     qst.save();
     return res.status(201).json(qst);
