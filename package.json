@@ -20,7 +20,7 @@
     "nodemon": "^2.0.1",
     "test": "^0.6.0",
     "tests": "^0.4.2",
-    "validator": "^12.1.0"
+    "validator": "^13.7.0"
   },
   "scripts": {
     "start": "node src/server.js",
